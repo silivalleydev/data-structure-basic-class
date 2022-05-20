@@ -1,0 +1,55 @@
+/**
+ * 스택
+ */
+const stack = [];
+
+stack.push('a');
+stack.push('b');
+stack.push('c');
+
+/**
+ * 박스가 3개 쌓임
+ * 
+ * |c|
+ * |b|
+ * |a|
+ */
+console.log('stack push => ', stack);
+
+/**
+ * 나중에 들어온 c 가 먼저 나감(pop)
+ *  => c
+ * | |
+ * |b|
+ * |a|
+ */
+stack.pop();
+console.log('stack pop => ', stack);
+
+//============================================================
+
+/**
+ * 큐
+ */
+const queue = [];
+
+queue.push('a');
+queue.push('b');
+queue.push('c');
+
+/** 
+ * 먼저 들어온 a b c 순으로 줄서있음
+ * ----------------
+ *  c  |  b  |  a
+ * ----------------
+ */
+console.log('queue ==> ', queue);
+
+/** 
+ * 먼저 들어온 a 가 먼저 나감 shift
+ * ----------------
+ *  c  |  b  |    =>  a
+ * ----------------
+ */
+queue.shift();
+console.log('queue shift ==> ', queue);
