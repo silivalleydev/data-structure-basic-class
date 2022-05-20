@@ -53,3 +53,18 @@ console.log('queue ==> ', queue);
  */
 queue.shift();
 console.log('queue shift ==> ', queue);
+
+//============================================================
+
+/**
+ * 재귀함수
+ * 
+ * 자연수 N을 넣어 recursiveFunction을 실행하면 자기 자신을 N번 호출하는 재귀 함수이다.
+ */
+function recursiveFunction(n) {
+    console.log('실행', n)
+    if (n === 1) return true;
+    else return recursiveFunction(n - 1);
+}
+
+console.log('recursiveFunction end ==> ', recursiveFunction(10))

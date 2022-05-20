@@ -62,3 +62,35 @@ console.log('queue ==> ', queue);
 queue.shift();
 console.log('queue shift ==> ', queue);
 ```
+
+## 재귀 함수
+- 재귀 함수란 자기 자신을 다시 호출하는 함수를 의미한다.
+```js
+/**
+ * 재귀함수
+ * 
+ * 자연수 N을 넣어 recursiveFunction을 실행하면 자기 자신을 N번 호출하는 재귀 함수이다.
+ */
+function recursiveFunction(n) {
+    console.log('실행', n)
+    // 재귀함수를 구현할 때는 항상 종료 조건을 명시해야한다.
+    // 아래의 경우는 자연수 n이 1이되면 재귀 함수 호출을 종료한다.
+    if (n === 1) return true;
+    else return recursiveFunction(n - 1);
+}
+
+/**
+ *  recursiveFunction에 자연수 10을 넣으면 10번 큼 recursiveFunction을 호출한다.
+ * 실행 10
+ * 실행 9
+ * 실행 8
+ * 실행 7
+ * 실행 6
+ * 실행 5
+ * 실행 4
+ * 실행 3
+ * 실행 2
+ * 실행 1
+ */
+console.log('recursiveFunction end ==> ', recursiveFunction(10))
+```
